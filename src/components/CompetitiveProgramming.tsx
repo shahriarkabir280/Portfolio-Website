@@ -38,10 +38,10 @@ export const CompetitiveProgramming = () => {
       borderColor: "border-yellow-500/20",
       stats: {
         rating: "1426",
-        Division: "Div3",
+        Badges: "3",
         rank: "2 Star"
       },
-      achievements: ["Contest Performer", "Monthly Challenge", "Logic Master"]
+      achievements: ["Problem Solver Silver Badge","Contest Performer",  "Logic Master"]
     },
     {
       name: "CodeForces",
@@ -69,16 +69,16 @@ export const CompetitiveProgramming = () => {
         badges: "3",
         rank: "Gold"
       },
-      achievements: ["Problem Solving Silver", "Data Structure and Algorithm Silver Badge", "C language Gold Badge"]
+      achievements: ["Problem Solving Silver Badge", "Data Structure and Algorithm Silver Badge", "C language Gold Badge"]
     }
     
   ];
 
   const overallStats = [
-    { label: "Total Problems Solved", value: "500+", icon: Target },
+    { label: "Total Problems Solved", value: "400+", icon: Target },
     { label: "Contest Participated", value: "30+", icon: Trophy },
     { label: "Total Achievements", value: "8+", icon: Award },
-    { label: "Coding Streak", value: "Max 60 days", icon: TrendingUp }
+    { label: "Coding Streak", value: "Max 30 days", icon: TrendingUp }
   ];
 
   const recentAchievements = [
