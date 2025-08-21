@@ -64,9 +64,11 @@ export const Contact = () => {
               Send me a message
             </h3>
             
-            <form action="https://api.web3forms.com/submit" 
-              method="POST" 
-              className="space-y-6">
+            <form
+              action="https://formspree.io/f/mzzvlqwr" // replace with your Formspree ID
+              method="POST"
+              className="space-y-6"
+              >
               {/* Web3Forms Access Key */}
               <input type="hidden" name="access_key" value="d9b4e8df-4e75-45bb-ae1d-05c015d2b219" />
               <div className="grid sm:grid-cols-2 gap-4">
