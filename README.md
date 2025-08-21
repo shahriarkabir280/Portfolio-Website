@@ -1,5 +1,7 @@
 # 🌟 Md. Shahriar Kabir - Portfolio Website  
 
+[![Deploy with Vercel](https://vercel.com/button)](https://your-portfolio.vercel.app)
+
 Welcome to my **personal portfolio website** project!  
 This site showcases my skills, projects, and achievements as a software developer.  
 
@@ -29,10 +31,10 @@ Follow these steps to run the project locally:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone git@github.com:shahriarkabir280/Portfolio-Website.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd Portfolio Website
 
 # Step 3: Install the necessary dependencies.
 npm install
@@ -56,5 +58,12 @@ To deploy your own version:
 5. Click Deploy 🎉
 
 After a few seconds, your portfolio will be live with a free Vercel domain like: [My Portfolio Website]()
+
+
+# 📬 Contact
+Md. Shahriar Kabir
+
+Email: shahriarkabir280@gmail.com
+
 
 
