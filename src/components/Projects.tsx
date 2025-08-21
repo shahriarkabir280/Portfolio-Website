@@ -36,19 +36,18 @@ export const Projects = () => {
      },
 
     {
-      title: "Weather Dashboard",
-      description: "Interactive weather application with location-based forecasts, charts, and weather alerts. Learned API integration and data visualization.",
-      image: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=600&h=400&fit=crop",
-      tech: ["JavaScript", "HTML5", "CSS3", "Weather API", "Chart.js"],
-      github: "#",
-      live: "#",
-      featured: false
-    },
+        title: "Disaster Management System",
+        description: "A web-based Disaster Management System designed to streamline disaster response, victim management, and resource allocation. Built with a focus on efficient database handling and CRUD operations to ensure seamless coordination during emergencies.",
+        tech: ["HTML", "CSS", "Node.js", "Express.js", "MySQL", "npm"],
+        github: "https://github.com/shahriarkabir280/DisasterManagement",
+        live: "#",
+        featured: false
+      },
     {
       title: "Portfolio Website v1",
-      description: "My first portfolio website built with vanilla JavaScript and CSS. Learned fundamentals of responsive design and animations.",
+      description: "My first portfolio website where I practiced building responsive layouts and adding animations using modern web technologies.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      tech: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+      tech: ["TypeScript", "Tailwind CSS", "React", "shadcn-ui", "GSAP"],
       github: "https://github.com/shahriarkabir280/Portfolio-Website",
       live: "https://shahriarkabir-25.vercel.app/",
       featured: false
