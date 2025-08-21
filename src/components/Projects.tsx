@@ -49,8 +49,8 @@ export const Projects = () => {
       description: "My first portfolio website built with vanilla JavaScript and CSS. Learned fundamentals of responsive design and animations.",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
       tech: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/shahriarkabir280/Portfolio-Website",
+      live: "https://shahriarkabir-25.vercel.app/",
       featured: false
     },
     {
