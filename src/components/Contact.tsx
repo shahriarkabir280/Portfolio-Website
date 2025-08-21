@@ -65,70 +65,73 @@ export const Contact = () => {
             </h3>
             
             <form
-              action="https://formspree.io/f/mzzvlqwr" // replace with your Formspree ID
+              action="https://formspree.io/f/mzzvlqwr"
               method="POST"
               className="space-y-6"
-              >
-              {/* Web3Forms Access Key */}
+            >
               <input type="hidden" name="access_key" value="d9b4e8df-4e75-45bb-ae1d-05c015d2b219" />
+            
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    First Name
-                  </label>
+                  <label className="text-sm font-medium text-foreground">First Name</label>
                   <Input
+                    name="first_name"
                     placeholder="John"
                     className="glass-card border-border/50 focus:border-primary transition-colors"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Last Name
-                  </label>
+                  <label className="text-sm font-medium text-foreground">Last Name</label>
                   <Input
+                    name="last_name"
                     placeholder="Doe"
                     className="glass-card border-border/50 focus:border-primary transition-colors"
+                    required
                   />
                 </div>
               </div>
-              
+            
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">
-                  Email
-                </label>
+                <label className="text-sm font-medium text-foreground">Email</label>
                 <Input
                   type="email"
+                  name="email"
                   placeholder="john.doe@example.com"
                   className="glass-card border-border/50 focus:border-primary transition-colors"
+                  required
                 />
               </div>
-              
+            
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">
-                  Subject
-                </label>
+                <label className="text-sm font-medium text-foreground">Subject</label>
                 <Input
+                  name="subject"
                   placeholder="Project Collaboration"
                   className="glass-card border-border/50 focus:border-primary transition-colors"
                 />
               </div>
-              
+            
               <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">
-                  Message
-                </label>
+                <label className="text-sm font-medium text-foreground">Message</label>
                 <Textarea
+                  name="message"
                   placeholder="Tell me about your project..."
                   rows={5}
                   className="glass-card border-border/50 focus:border-primary transition-colors resize-none"
+                  required
                 />
               </div>
-              
-              <Button className="w-full group bg-gradient-primary hover:scale-[1.02] transition-all duration-300 glow-primary">
+            
+              <Button
+                type="submit"
+                className="w-full group bg-gradient-primary hover:scale-[1.02] transition-all duration-300 glow-primary"
+              >
                 <Send className="h-4 w-4 mr-2 group-hover:translate-x-1 transition-transform" />
                 Send Message
               </Button>
             </form>
+
           </Card>
 
           {/* Contact Info & Social */}
