@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Futuristic Portfolio Design System - Dark theme with electric accents */
+
+
+
+@layer base {
+  :root {
+    /* Core Background Colors */
+    --background: 240 10% 4%;
+    --background-secondary: 240 8% 8%;
+    --foreground: 0 0% 98%;
+
+    /* Card & Surface Colors */
+    --card: 240 8% 8%;
+    --card-hover: 240 8% 12%;
+    --card-foreground: 0 0% 98%;
+
+    /* Glass Morphism */
+    --glass: 240 8% 8% / 0.6;
+    --glass-border: 240 20% 20% / 0.3;
+
+    /* Electric Primary - Cyan */
+    --primary: 195 100% 50%;
+    --primary-glow: 195 100% 70%;
+    --primary-foreground: 240 10% 4%;
+
+    /* Purple Accent */
+    --secondary: 270 100% 60%;
+    --secondary-glow: 270 100% 80%;
+    --secondary-foreground: 240 10% 4%;
+
+    /* Neon Green Success */
+    --success: 120 100% 50%;
+    --success-glow: 120 100% 70%;
+    --success-foreground: 240 10% 4%;
+
+    /* Text Colors */
+    --muted: 240 5% 25%;
+    --muted-foreground: 240 5% 65%;
+
+    /* Interactive Elements */
+    --accent: 195 100% 50%;
+    --accent-foreground: 240 10% 4%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 20% 20%;
+    --input: 240 8% 12%;
+    --ring: 195 100% 50%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(270 100% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(270 100% 60%) 0%, hsl(195 100% 50%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 4%) 0%, hsl(240 8% 8%) 50%, hsl(195 100% 50% / 0.1) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(240 8% 8% / 0.8) 0%, hsl(240 8% 12% / 0.6) 100%);
+
+    /* Shadows & Glows */
+    --shadow-primary: 0 0 40px hsl(195 100% 50% / 0.3);
+    --shadow-secondary: 0 0 40px hsl(270 100% 60% / 0.3);
+    --shadow-card: 0 8px 32px hsl(240 10% 4% / 0.5);
+    --shadow-glow: 0 0 60px hsl(195 100% 50% / 0.4);
+
+    /* Animations */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: var(--gradient-hero);
+  }
+}
+
+@layer components {
+  /* Glass Morphism Card */
+  .glass-card {
+    @apply backdrop-blur-xl border border-white/10 bg-white/5;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--shadow-secondary);
+  }
+
+  /* Animated Gradient Background */
+  .animated-gradient {
+    background: var(--gradient-primary);
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease-in-out infinite;
+  }
+
+  /* Hover Lift Animation */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+    &:hover {
+      @apply -translate-y-1;
+      box-shadow: var(--shadow-glow);
+    }
+  }
+
+  /* Cyber Border */
+  .cyber-border {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      padding: 1px;
+      background: var(--gradient-primary);
+      border-radius: inherit;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: xor;
+    }
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Animation Classes */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+
+  /* Stagger Delays */
+  .animate-delay-200 { animation-delay: 0.2s; }
+  .animate-delay-400 { animation-delay: 0.4s; }
+  .animate-delay-600 { animation-delay: 0.6s; }
+  .animate-delay-800 { animation-delay: 0.8s; }
+}
