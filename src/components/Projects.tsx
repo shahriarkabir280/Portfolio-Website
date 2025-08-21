@@ -38,6 +38,7 @@ export const Projects = () => {
     {
         title: "Disaster Management System",
         description: "A web-based Disaster Management System designed to streamline disaster response, victim management, and resource allocation. Built with a focus on efficient database handling and CRUD operations to ensure seamless coordination during emergencies.",
+        image: "https://images.unsplash.com/photo-1547683905-f686c993aae5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJhbCUyMGRpc2FzdGVyfGVufDB8fDB8fHww",
         tech: ["HTML", "CSS", "Node.js", "Express.js", "MySQL", "npm"],
         github: "https://github.com/shahriarkabir280/DisasterManagement",
         live: "#",
