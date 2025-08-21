@@ -17,7 +17,7 @@ export const Skills = () => {
       title: "Frontend Development",
       icon: Code2,
       color: "primary",
-      skills: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"]
+      skills: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Flutter"]
     },
     {
       title: "Backend Development",
