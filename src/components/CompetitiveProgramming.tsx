@@ -91,7 +91,7 @@ export const CompetitiveProgramming = () => {
     {
       title: "CodeChef Starters 88 Contest",
       description: "Achieved a Global Rank of 348 among thousands of competitive programmers.",
-      date: "3rd May 2023",
+      date: "May 2023",
       badge:"2 Stars"
 
 
