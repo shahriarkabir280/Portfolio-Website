@@ -98,7 +98,7 @@ export const Education = () => {
           </div>
         </div>
 
-        {/* Certifications Grid */}
+        {/* Certifications Grid 
         <div>
           <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Professional Certifications</h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -118,7 +118,7 @@ export const Education = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </div>*/}
       </div>
     </section>
   );
