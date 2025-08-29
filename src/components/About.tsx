@@ -65,7 +65,7 @@ export const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">
                 Fresh Graduate & Aspiring Developer
               </h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              {/* <p className="text-muted-foreground leading-relaxed text-lg">
               I'm a 3rd-year Computer Science undergraduate passionate about software development. 
               Through academic projects and self-learning, I've built a strong foundation in modern 
               technologies and enjoy turning ideas into functional applications.
@@ -74,7 +74,20 @@ export const About = () => {
               I'm eager to contribute to innovative projects and grow as a developer. My academic 
               background, combined with hands-on project experience, has prepared me to tackle 
               real-world challenges and make meaningful contributions to development teams.
-            </p>
+            </p>*/}
+              <div className="max-w-3xl mx-auto space-y-4">
+              <p className="text-muted-foreground leading-relaxed text-lg text-justify">
+                I'm a 3rd-year Computer Science undergraduate passionate about software development. 
+                Through academic projects and self-learning, I've built a strong foundation in modern 
+                technologies and enjoy turning ideas into functional applications.
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-justify">
+                I'm eager to contribute to innovative projects and grow as a developer. My academic 
+                background, combined with hands-on project experience, has prepared me to tackle 
+                real-world challenges and make meaningful contributions to development teams.
+              </p>
+            </div>
+
             </div>
 
             {/* Interests */}
