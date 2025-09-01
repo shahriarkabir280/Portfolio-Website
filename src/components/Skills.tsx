@@ -146,9 +146,9 @@ export const Skills = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
-              "Linux", "Windows", "Vercel", "Heroku", 
+              "Linux", "Windows", "Vercel", "Heroku", "Render", "Cloudinary",
               "Chart.js", "Socket.io", "API Integration", "JSON", "Fetch API",
-              "Agile", "Scrum", "Code Reviews", "Testing", "Debugging", "Documentation"
+               "Code Reviews", "Testing", "Debugging", "Documentation"
             ].map((tool, index) => (
               <Badge
                 key={tool}
