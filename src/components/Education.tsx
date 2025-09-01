@@ -9,7 +9,7 @@ export const Education = () => {
   institution: "University of Dhaka",
   location: "Dhaka, Bangladesh", 
   period: "2022 - 2026",
-  gpa: "3.59/4.0",
+  gpa: "---",
   description: "Building a strong foundation in computer science with a focus on software development, algorithms, system design, artificial intelligence, and machine learning."
 },
 {
