@@ -8,8 +8,8 @@ export const Education = () => {
   degree: "Bachelor of Science in Computer Science and Engineering",
   institution: "University of Dhaka",
   location: "Dhaka, Bangladesh", 
-  period: "2022 - 2026",
-  gpa: "---",
+  period: "2022 - 2026(Expected)",
+  cgpa: "---",
   description: "Building a strong foundation in computer science with a focus on software development, algorithms, system design, artificial intelligence, and machine learning."
 },
 {
