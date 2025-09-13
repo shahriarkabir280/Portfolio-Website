@@ -88,7 +88,7 @@ export const Education = () => {
                         <span>{edu.location}</span>
                       </div>
                       <div className="text-success font-semibold">
-                        GPA: {edu.gpa}
+                        {edu.cgpa ? `CGPA: ${edu.cgpa}` : `GPA: ${edu.gpa}`}
                       </div>
                     </div>
                   </div>
