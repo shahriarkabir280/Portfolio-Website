@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import profileImage from "@/assets/Myprofileimage.png";
+import profileImage from "@/assets/prof.png";
 
 
 export const About = () => {
