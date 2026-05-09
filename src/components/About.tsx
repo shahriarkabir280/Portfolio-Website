@@ -28,13 +28,13 @@ export const About = () => {
           <div className="space-y-8">
            <div className="relative max-w-md mx-auto lg:mx-0">
               {/* Taller, responsive profile image */}
-              <div className="rounded-2xl overflow-hidden glass-card hover-lift w-full">
+              <div className="rounded-2xl overflow-hidden glass-card hover-lift w-full h-[230px]">
                 <img
                   src={profileImage}
                   alt="Md. Shahriar Kabir"
-                  className="w-full rounded-2xl"
+                  className="w-full h-full object-cover object-top rounded-2xl"
                 />
-              </div>
+                </div>
 
 
               {/* Floating Badge */}
