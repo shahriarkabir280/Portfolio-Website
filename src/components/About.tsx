@@ -28,7 +28,7 @@ export const About = () => {
           <div className="space-y-8">
            <div className="relative max-w-md mx-auto lg:mx-0">
               {/* Taller, responsive profile image */}
-              <div className="rounded-2xl overflow-hidden glass-card hover-lift w-full h-[250px]">
+              <div className="rounded-2xl overflow-hidden glass-card hover-lift w-full h-[350px]">
                 <img
                   src={profileImage}
                   alt="Md. Shahriar Kabir"
