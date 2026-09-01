@@ -1,245 +1,143 @@
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Code, 
-  Trophy, 
-  Star, 
-  Zap, 
-  Award, 
-  Target, 
-  TrendingUp,
-  Calendar,
-  ExternalLink
-} from "lucide-react";
-import { Description } from "@radix-ui/react-toast";
+import { ArrowUpRight, Target, Trophy, Award, TrendingUp } from "lucide-react";
 
 export const CompetitiveProgramming = () => {
   const platforms = [
-    /*{
-      name: "LeetCode",
-      icon: Code,
-      href: "https://leetcode.com/shahriarkabir280",
-      color: "text-orange-500",
-      bgColor: "bg-orange-500/10",
-      borderColor: "border-orange-500/20",
-      stats: {
-        solved: "50+",
-        rating: "---",
-        rank: "---"
-      },
-      achievements: ["Daily Coding Challenge", "Problem Solver Badge", "DSA Expert"]
-    },*/
     {
       name: "CodeChef",
-      icon: Zap,
       href: "https://www.codechef.com/users/shahriar42",
-      color: "text-yellow-500",
-      bgColor: "bg-yellow-500/10",
-      borderColor: "border-yellow-500/20",
-      stats: {
-        rating: "1426",
-        Badges: "3",
-        rank: "2 Star"
-      },
-      achievements: ["Problem Solver Silver Badge","Contest Performer",  "Logic Master"]
+      handle: "shahriar42",
+      stats: [
+        { label: "Rating", value: "1426" },
+        { label: "Stars", value: "2★" },
+        { label: "Badges", value: "3" },
+      ],
+      achievements: ["Problem Solver — Silver", "Contest performer"],
     },
     {
-      name: "CodeForces",
-      icon: Star,
+      name: "Codeforces",
       href: "https://codeforces.com/profile/Dopamine_01",
-      color: "text-blue-500",
-      bgColor: "bg-blue-500/10",
-      borderColor: "border-blue-500/20",
-      stats: {
-        rating: "996",
-        maxRating: "1025",
-        rank: "newbie"
-      },
-      achievements: ["Contest Participant", "Problem Solver", "Algorithm Specialist"]
+      handle: "Dopamine_01",
+      stats: [
+        { label: "Rating", value: "996" },
+        { label: "Max", value: "1025" },
+        { label: "Rank", value: "Newbie" },
+      ],
+      achievements: ["Regular contestant"],
     },
     {
       name: "HackerRank",
-      icon: Trophy,
       href: "https://www.hackerrank.com/profile/shahriarkabir_20",
-      color: "text-green-500",
-      bgColor: "bg-green-500/10",
-      borderColor: "border-green-500/20",
-      stats: {
-        stars: "5 Star",
-        badges: "3",
-        rank: "Gold"
-      },
-      achievements: ["Problem Solving Silver Badge", "Data Structure and Algorithm Silver Badge", "C language Gold Badge"]
-    }
-    
+      handle: "shahriarkabir_20",
+      stats: [
+        { label: "Problem Solving", value: "Silver" },
+        { label: "DSA", value: "Silver" },
+        { label: "C", value: "Gold" },
+      ],
+      achievements: ["5★ in C", "Silver in Problem Solving"],
+    },
   ];
 
   const overallStats = [
-    { label: "Total Problems Solved", value: "400+", icon: Target },
-    { label: "Contest Participated", value: "30+", icon: Trophy },
-    { label: "Total Achievements", value: "8+", icon: Award },
-    { label: "Coding Streak", value: "Max 30 days", icon: TrendingUp }
+    { label: "Problems solved", value: "400+", icon: Target },
+    { label: "Contests", value: "30+", icon: Trophy },
+    { label: "Achievements", value: "8+", icon: Award },
+    { label: "Best streak", value: "30 days", icon: TrendingUp },
   ];
 
-  const recentAchievements = [
-    /*{
-      title: "LeetCode Weekly Contest",
-      description: "Ranked in top 10% in weekly contest #380",
-      date: "Dec 2024",
-      badge: "Contest Winner"
-    },*/
-    {
-      title: "CodeChef Starters 88 Contest",
-      description: "Achieved a Global Rank of 348 among thousands of competitive programmers.",
-      date: "May 2023",
-      badge:"2 Stars"
-
-
-    },
-    {
-      title: "HackerRank Silver Badge",
-      description: "Achieved Silver level in Problem Solving domain",
-      date: "Feb 2024",
-      badge: "Silver Badge"
-    },
-    {
-      title: "CodeForces Rating Milestone",
-      description: "Reached highest rating of 1050",
-      date: "July 2023",
-      badge: "Rating Milestone"
-    }
+  const skills = [
+    "Dynamic programming",
+    "Graph theory",
+    "Data structures",
+    "Greedy",
+    "Number theory",
+    "Complexity analysis",
   ];
 
   return (
-    <section id="competitive-programming" className="py-20 px-4">
+    <section
+      id="competitive-programming"
+      className="border-t border-border py-20 md:py-28"
+    >
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Competitive <span className="gradient-text">Programming</span>
-          </h2>
-          <div className="h-1 w-20 mx-auto animated-gradient rounded-full"></div>
-          <p className="text-muted-foreground mt-6 max-w-2xl mx-auto text-lg">
-            Passionate about algorithmic problem solving and competitive programming challenges
+        <div className="max-w-2xl">
+          <span className="eyebrow">Competitive programming</span>
+          <h2 className="section-heading mt-3">Algorithmic problem solving</h2>
+          <p className="mt-4 text-muted-foreground">
+            A hobby that keeps my fundamentals sharp. Active mostly on CodeChef,
+            Codeforces, and HackerRank.
           </p>
         </div>
 
-        {/* Overall Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {overallStats.map((stat, index) => {
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {overallStats.map((stat) => {
             const Icon = stat.icon;
             return (
-              <Card key={stat.label} className="glass-card p-6 text-center hover-lift animate-fade-in" 
-                    style={{ animationDelay: `${index * 0.1}s` }}>
-                <Icon className="h-8 w-8 mx-auto mb-3 text-primary" />
-                <div className="text-2xl font-bold text-foreground">{stat.value}</div>
+              <div key={stat.label} className="surface p-5">
+                <Icon className="h-4 w-4 text-primary" />
+                <div className="mt-3 text-xl font-semibold text-foreground">
+                  {stat.value}
+                </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </Card>
+              </div>
             );
           })}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Platforms */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Platforms & Achievements</h3>
-            
-            {platforms.map((platform, index) => {
-              const Icon = platform.icon;
-              return (
-                <Card key={platform.name} 
-                      className={`glass-card p-6 hover-lift animate-slide-in-right border-l-4 ${platform.borderColor}`}
-                      style={{ animationDelay: `${index * 0.2}s` }}>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className={`p-3 rounded-lg ${platform.bgColor}`}>
-                        <Icon className={`h-6 w-6 ${platform.color}`} />
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-semibold text-foreground">{platform.name}</h4>
-                        <a 
-                          href={platform.href}
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
-                        >
-                          View Profile <ExternalLink className="h-3 w-3" />
-                        </a>
-                      </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {platforms.map((platform) => (
+            <a
+              key={platform.name}
+              href={platform.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="surface-hover group flex flex-col p-6"
+            >
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-semibold text-foreground">
+                  {platform.name}
+                </h3>
+                <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-foreground" />
+              </div>
+              <p className="mt-0.5 font-mono text-xs text-muted-foreground">
+                @{platform.handle}
+              </p>
+
+              <div className="mt-4 grid grid-cols-3 gap-2">
+                {platform.stats.map((s) => (
+                  <div key={s.label} className="rounded-md bg-background-secondary p-2 text-center">
+                    <div className="text-xs font-medium text-foreground">
+                      {s.value}
+                    </div>
+                    <div className="mt-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">
+                      {s.label}
                     </div>
                   </div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-3 mb-4">
-                    {Object.entries(platform.stats).map(([key, value]) => (
-                      <div key={key} className="text-center p-2 glass-card rounded-lg">
-                        <div className="text-sm font-medium text-foreground">{value}</div>
-                        <div className="text-xs text-muted-foreground capitalize">{key}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Achievements */}
-                  <div className="flex flex-wrap gap-2">
-                    {platform.achievements.map((achievement) => (
-                      <Badge key={achievement} variant="secondary" className="text-xs">
-                        {achievement}
-                      </Badge>
-                    ))}
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
-
-          {/* Recent Achievements */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">Recent Achievements</h3>
-            
-            <div className="space-y-4">
-              {recentAchievements.map((achievement, index) => (
-                <Card key={achievement.title} 
-                      className="glass-card p-6 hover-lift animate-fade-in"
-                      style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 rounded-lg bg-gradient-primary">
-                      <Award className="h-5 w-5 text-primary-foreground" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-semibold text-foreground">{achievement.title}</h4>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Calendar className="h-4 w-4" />
-                          {achievement.date}
-                        </div>
-                      </div>
-                      <p className="text-muted-foreground text-sm mb-3">{achievement.description}</p>
-                      <Badge variant="outline" className="text-xs">
-                        {achievement.badge}
-                      </Badge>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-
-            {/* Skills Developed */}
-            <Card className="glass-card p-6 hover-lift">
-              <h4 className="font-semibold text-foreground mb-4">Skills Developed</h4>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Dynamic Programming",
-                  "Graph Theory",
-                  "Data Structures",
-                  "Algorithm Design",
-                  "Time Complexity",
-                  "Problem Solving",
-                  "Mathematical Logic",
-                  "Optimization"
-                ].map((skill) => (
-                  <Badge key={skill} variant="secondary" className="text-xs">
-                    {skill}
-                  </Badge>
                 ))}
               </div>
-            </Card>
+
+              <div className="mt-4 flex flex-wrap gap-1.5">
+                {platform.achievements.map((a) => (
+                  <span
+                    key={a}
+                    className="rounded-md border border-border px-2 py-0.5 text-xs text-muted-foreground"
+                  >
+                    {a}
+                  </span>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-6 surface p-6">
+          <h3 className="text-sm font-medium text-foreground">Topics I&apos;m comfortable with</h3>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {skills.map((skill) => (
+              <Badge key={skill} variant="secondary" className="font-normal">
+                {skill}
+              </Badge>
+            ))}
           </div>
         </div>
       </div>

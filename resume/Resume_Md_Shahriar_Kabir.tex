@@ -1,0 +1,113 @@
+% ============================================================
+%  Md. Shahriar Kabir - Resume
+%  ATS-friendly, single column, one page.
+%  Compile with: xelatex  (or pdflatex / lualatex - fontawesome5 supports all)
+% ============================================================
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[a4paper,margin=0.5in]{geometry}
+\usepackage{parskip}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+
+\hypersetup{
+  pdftitle={Md. Shahriar Kabir - Resume},
+  pdfauthor={Md. Shahriar Kabir}
+}
+
+% ---------- Formatting ----------
+\pagestyle{empty}
+\setlength{\parskip}{1pt}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{1pt}\hrule\vspace{2pt}]
+\titlespacing*{\section}{0pt}{4pt}{1pt}
+
+\setlist[itemize]{leftmargin=1.1em,label=\textbullet,topsep=1pt,itemsep=0.5pt,parsep=0pt,after=\vspace{1pt}}
+
+\newcommand{\headingrow}[2]{\textbf{#1}\hfill\textbf{#2}\par}
+\newcommand{\subrow}[2]{\textit{#1}\hfill\textit{#2}\par\vspace{1pt}}
+\newcommand{\sep}{\,\textbar\,}
+
+% ============================================================
+\begin{document}
+
+% ===== Header =====
+\begin{center}
+{\LARGE \textbf{Md. Shahriar Kabir}} \\[2pt]
+Dhaka, Bangladesh \\
+\faIcon{envelope}~\href{mailto:shahriarkabir280@gmail.com}{shahriarkabir280@gmail.com} \sep
+\faIcon{phone}~+880 1918797689 \sep
+\faIcon{linkedin}~\href{https://www.linkedin.com/in/shahriar-kabir25}{shahriar-kabir25} \sep
+\faIcon{github}~\href{https://github.com/shahriarkabir280}{shahriarkabir280}
+\end{center}
+
+% ===== Summary =====
+\section*{Summary}
+Final-year Computer Science and Engineering student and Backend AI Engineer Intern at FlyRank AI,
+building RAG answer flows, structured-output and tool-calling pipelines, REST APIs, and full-stack apps
+with Python, FastAPI, and Node.js. 400+ competitive-programming problems solved.
+
+% ===== Experience =====
+\section*{Experience}
+\headingrow{FlyRank AI \textemdash\ Backend AI Engineer Intern}{Jun 2026 \textendash\ Present}
+\subrow{Remote \textbullet\ part-time}{}
+\begin{itemize}
+  \item Design API contracts and retrieval-backed answer flows for AI product features, owning correctness and failure handling.
+  \item Build structured-output and tool-calling workflows over LLM APIs, with schema validation and deterministic parsing of model responses.
+  \item Implement RAG components (ingestion, chunking, embedding, retrieval) behind async FastAPI services.
+  \item Write evaluation harnesses that score answer quality and catch regressions across prompt and retrieval changes; review pull requests and design docs with a distributed team.
+\end{itemize}
+
+% ===== Projects =====
+\section*{Projects}
+
+\headingrow{Digital Knowledge Platform \textemdash\ digital library \& knowledge management}{\href{https://csedu-dkp.farefin.com/library}{Live} \sep \href{https://github.com/shahriarkabir280/Digital-Knowledge-Platform}{GitHub}}
+\subrow{Node.js, Python, Supabase (PostgreSQL), REST APIs, Microservices}{}
+\begin{itemize}
+  \item Built a role-based platform for creating, organizing, and searching academic resources: document repository, circulation/loan system, and student project showcase.
+  \item Designed a Node.js REST API plus a standalone Python microservice for automated metadata extraction from uploaded documents.
+  \item Implemented authentication, authorization, and role-based access control on Supabase/PostgreSQL for multiple user types.
+\end{itemize}
+
+\headingrow{GrocyGenie \textemdash\ AI grocery-prediction model}{\href{https://huggingface.co/spaces/shahriar031/GrocyGenie}{Demo} \sep \href{https://github.com/shahriarkabir280/GrocyGenieModel}{GitHub}}
+\subrow{Python, TensorFlow, pandas, NumPy, Hugging Face, Google Colab}{}
+\begin{itemize}
+  \item Developed an ML model that predicts grocery-depletion dates from personalized consumption patterns across multiple item categories.
+  \item Trained and evaluated the model in Google Colab and deployed it as a Hugging Face Space with an inference API for the GrocyGenie mobile app.
+\end{itemize}
+
+\headingrow{FamNest \textemdash\ family finance \& organizing app}{\href{https://drive.google.com/file/d/1pVehxGPYByR9XKXYuL-etnwCfXqRqdVO/view}{Demo} \sep \href{https://github.com/shahriarkabir280/FamNest}{GitHub}}
+\subrow{Flutter, Dart, FastAPI, MongoDB Atlas, Cloudinary}{}
+\begin{itemize}
+  \item Built an Android app for expense tracking, event management, and document storage across multi-user households.
+  \item Designed FastAPI REST endpoints, optimized MongoDB Atlas queries, and integrated Cloudinary-backed media storage with organized, searchable files.
+\end{itemize}
+
+% ===== Education =====
+\section*{Education}
+\headingrow{University of Dhaka \textemdash\ B.Sc. in Computer Science and Engineering}{Expected Dec 2026}
+\subrow{Dhaka, Bangladesh}{}% CGPA hidden - restore with: {CGPA: 3.59 / 4.00 (through 5th semester)}
+\textbf{Relevant coursework:} Data Structures, Algorithm Analysis, Object-Oriented Programming,
+Database Management, Operating Systems, Computer Networks, Software Engineering, Machine Learning,
+Artificial Intelligence.
+
+% ===== Skills =====
+\section*{Skills}
+\textbf{Languages:} Python, JavaScript, TypeScript, Java, C, C++, Dart, SQL\\
+\textbf{Backend \& AI:} FastAPI, Node.js, Express, REST APIs, RAG, LLM APIs, tool calling, TensorFlow, Hugging Face\\
+\textbf{Frontend \& Mobile:} React, Flutter, JavaFX, HTML, CSS, Tailwind CSS\\
+\textbf{Data \& Infrastructure:} PostgreSQL, Supabase, MongoDB, MySQL, Docker, Git, GitHub Actions, Linux\\
+\textbf{Practices:} API design, evaluation harnesses, code review, unit testing, CI/CD
+
+% ===== Achievements & Certifications =====
+\section*{Achievements \& Certifications}
+\begin{itemize}
+  \item \textbf{Competitive programming:} 400+ problems solved on \href{https://www.codechef.com/users/shahriar42}{CodeChef} (rating 1426, 2-star); Silver badges in Problem Solving and DSA on \href{https://www.hackerrank.com/profile/shahriarkabir_20}{HackerRank}.
+  \item \textbf{Certifications:} \href{https://www.codechef.com/certificates/public/a367201}{Learn Python Pro}, CodeChef (2023) \sep \href{https://www.hackerrank.com/certificates/6d1cdc7ba513}{SQL (Basic)}, HackerRank (2025).
+  \item \textbf{Languages:} Bangla (native), English (professional working proficiency).
+\end{itemize}
+
+\end{document}
