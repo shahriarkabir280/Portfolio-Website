@@ -56,7 +56,7 @@ export const Hero = () => {
                 onClick={() => window.open("/Resume_Md_Shahriar_Kabir.pdf", "_blank")}
               >
                 <Download className="h-4 w-4" />
-                Download résumé
+                Download resume
               </Button>
             </div>
 
