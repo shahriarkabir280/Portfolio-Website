@@ -4,17 +4,6 @@ import { ArrowUpRight, Github } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
-      title: "Digital Knowledge Platform — academic library & resource hub",
-      description:
-        "A digital library and knowledge-management platform for academic resources, combining a document repository, circulation system, project showcase, and role-based collaboration.",
-      image:
-        "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&auto=format&fit=crop&q=60",
-      tech: ["Node.js", "Python", "Supabase", "PostgreSQL", "REST APIs"],
-      github: "https://github.com/shahriarkabir280/Digital-Knowledge-Platform",
-      live: "https://csedu-dkp.farefin.com/library",
-      featured: true,
-    },
-    {
       title: "GrocyGenie — grocery prediction model",
       description:
         "An AI model that predicts when your grocery items will run out, so you can restock before running short. Built as the model layer for the GrocyGenie mobile app.",
@@ -23,6 +12,17 @@ export const Projects = () => {
       tech: ["Python", "TensorFlow", "pandas", "NumPy", "Hugging Face", "Google Colab"],
       github: "https://github.com/shahriarkabir280/GrocyGenieModel",
       live: "https://huggingface.co/spaces/shahriar031/GrocyGenie",
+      featured: true,
+    },
+    {
+      title: "Digital Knowledge Platform — academic library & resource hub",
+      description:
+        "A digital library and knowledge-management platform for academic resources, combining a document repository, circulation system, project showcase, and role-based collaboration.",
+      image:
+        "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&auto=format&fit=crop&q=60",
+      tech: ["Node.js", "Python", "Supabase", "PostgreSQL", "REST APIs"],
+      github: "https://github.com/shahriarkabir280/Digital-Knowledge-Platform",
+      live: "https://csedu-dkp.farefin.com/library",
       featured: true,
     },
     {
