@@ -131,7 +131,7 @@ export const CompetitiveProgramming = () => {
         </div>
 
         <div className="mt-6 surface p-6">
-          <h3 className="text-sm font-medium text-foreground">Topics I&apos;m comfortable with</h3>
+          <h3 className="text-sm font-medium text-foreground">Strong areas</h3>
           <div className="mt-3 flex flex-wrap gap-2">
             {skills.map((skill) => (
               <Badge key={skill} variant="secondary" className="font-normal">

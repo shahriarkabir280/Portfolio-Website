@@ -47,7 +47,7 @@ export const Skills = () => {
     },
   ];
 
-  const learning = ["LangChain", "Vector Databases", "Agentic AI Systems"];
+  const learning = ["LangChain & LangGraph", "AI agents & tool calling", "Model Context Protocol (MCP)", "Multi-agent systems"];
 
   return (
     <section id="skills" className="border-t border-border py-20 md:py-28">
