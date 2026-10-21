@@ -2,9 +2,9 @@ import { Badge } from "@/components/ui/badge";
 
 export const About = () => {
   const stats = [
-    { label: "GitHub projects", value: "9+" },
-    { label: "Technologies used", value: "15+" },
-    { label: "Commits", value: "400+" },
+    { label: "GitHub repositories", value: "20+" },
+    { label: "Technologies used", value: "30+" },
+    { label: "Commits", value: "800+" },
     { label: "Problems solved", value: "400+" },
   ];
 
