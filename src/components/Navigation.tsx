@@ -2,25 +2,41 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download } from "lucide-react";
 
+const navItems = [
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Research", href: "#research" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education", href: "#education" },
+  { name: "Contact", href: "#contact" },
+];
+
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeHref, setActiveHref] = useState("");
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 8);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+
+      // The active section is the last one whose top has passed just below the nav bar
+      let current = "";
+      for (const item of navItems) {
+        const section = document.querySelector(item.href);
+        if (section && section.getBoundingClientRect().top <= 120) current = item.href;
+      }
+      // At the very bottom the last section may be too short to reach the top
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) {
+        current = navItems[navItems.length - 1].href;
+      }
+      setActiveHref(current);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Research", href: "#research" },
-    { name: "Skills", href: "#skills" },
-    { name: "Education", href: "#education" },
-    { name: "Contact", href: "#contact" },
-  ];
 
   const scrollToSection = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
@@ -30,9 +46,11 @@ export const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-200 ${
-        isScrolled
-          ? "border-b border-border bg-background/80 backdrop-blur-md"
-          : "border-b border-transparent"
+        isOpen
+          ? "border-b border-border bg-background shadow-sm"
+          : isScrolled
+            ? "border-b border-border bg-background/80 backdrop-blur-md"
+            : "border-b border-transparent"
       }`}
     >
       <div className="container mx-auto">
@@ -49,7 +67,10 @@ export const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                aria-current={activeHref === item.href ? "true" : undefined}
+                className={`text-sm transition-colors hover:text-foreground ${
+                  activeHref === item.href ? "font-medium text-foreground" : "text-muted-foreground"
+                }`}
               >
                 {item.name}
               </button>
@@ -84,7 +105,10 @@ export const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full rounded-md px-3 py-2 text-left text-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                aria-current={activeHref === item.href ? "true" : undefined}
+                className={`block w-full rounded-md px-3 py-2 text-left text-sm transition-colors hover:bg-muted hover:text-foreground ${
+                  activeHref === item.href ? "bg-muted font-medium text-foreground" : "text-muted-foreground"
+                }`}
               >
                 {item.name}
               </button>

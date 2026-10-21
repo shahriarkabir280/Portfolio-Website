@@ -12,7 +12,7 @@ export const CompetitiveProgramming = () => {
         { label: "Stars", value: "2★" },
         { label: "Badges", value: "3" },
       ],
-      achievements: ["Problem Solver — Silver", "Contest performer"],
+      achievements: ["Problem Solver: Silver", "Contest performer"],
     },
     {
       name: "Codeforces",

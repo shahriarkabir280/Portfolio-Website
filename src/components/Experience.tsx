@@ -3,14 +3,14 @@ import { ArrowUpRight, Calendar, MapPin } from "lucide-react";
 export const Experience = () => {
   const roles = [
     {
-      title: "Backend AI Engineer — Intern",
+      title: "Backend AI Engineer Intern",
       company: "FlyRank AI",
       companyUrl: "https://internship.flyrank.ai/",
       companyNote: "The autopilot for organic growth",
-      period: "Jun 2026 — Present",
+      period: "Jun 2026 – Present",
       location: "Chicago, Illinois, US · Remote",
       description:
-        "Working on the backend AI systems behind FlyRank — building retrieval-augmented generation pipelines and the APIs that serve them.",
+        "Working on the backend AI systems behind FlyRank, building retrieval-augmented generation pipelines and the APIs that serve them.",
       skills: [
         "Python",
         "FastAPI",

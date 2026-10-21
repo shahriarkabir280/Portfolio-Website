@@ -35,8 +35,8 @@ export const Hero = () => {
             </h1>
 
             <p className="mt-4 text-lg md:text-xl text-muted-foreground">
-              I turn ideas into working software — from full-stack apps to
-              production RAG pipelines — and sharpen my edge with the
+              I turn ideas into working software, from full-stack apps to
+              production RAG pipelines, and sharpen my edge with the
               occasional algorithmic puzzle.
             </p>
 

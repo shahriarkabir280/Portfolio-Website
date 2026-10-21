@@ -18,12 +18,12 @@ export const Skills = () => {
     {
       title: "Backend",
       icon: Server,
-      skills: ["Node.js", "Express", "FastAPI", "REST APIs"],
+      skills: ["Node.js", "Express", "FastAPI", "REST APIs", "Socket.IO", "WebRTC"],
     },
     {
       title: "AI / ML",
       icon: Sparkles,
-      skills: ["RAG", "LLM APIs", "TensorFlow", "pandas", "NumPy", "Hugging Face"],
+      skills: ["RAG", "LLM APIs", "scikit-learn", "TensorFlow", "pandas", "NumPy", "SciPy", "Hugging Face"],
     },
     {
       title: "Languages",
@@ -33,7 +33,7 @@ export const Skills = () => {
     {
       title: "Databases",
       icon: Database,
-      skills: ["MySQL", "MongoDB", "PostgreSQL", "SQLite"],
+      skills: ["PostgreSQL", "pgvector", "MySQL", "MongoDB", "Redis", "Supabase", "SQLite"],
     },
     {
       title: "Tools",

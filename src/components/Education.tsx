@@ -6,7 +6,7 @@ export const Education = () => {
       degree: "BSc in Computer Science and Engineering",
       institution: "University of Dhaka",
       location: "Dhaka, Bangladesh",
-      period: "2022 — 2026 (expected)",
+      period: "2022 – 2026 (expected)",
       result: null as string | null,
       description:
         "Coursework across Data Structures and Algorithms, Databases, Networking, Operating Systems, Machine Learning and Artificial Intelligence, alongside team and solo software projects.",
@@ -15,7 +15,7 @@ export const Education = () => {
       degree: "Higher Secondary Certificate (Science)",
       institution: "Adamjee Cantonment College",
       location: "Dhaka, Bangladesh",
-      period: "2019 — 2021",
+      period: "2019 – 2021",
       result: null as string | null,
       description:
         "Focused on Science - Mathematics, Physics, and Chemistry.",

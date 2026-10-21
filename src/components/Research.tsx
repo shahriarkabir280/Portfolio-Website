@@ -6,7 +6,7 @@ export const Research = () => {
       icon: Video,
       title: "Video anomaly detection",
       description:
-        "Detecting and localizing unusual events in real-world and surveillance footage — from short clips to long, untrimmed videos.",
+        "Detecting and localizing unusual events in real-world and surveillance footage, from short clips to long, untrimmed videos.",
       keywords: ["Temporal localization", "Long-video understanding"],
     },
     {
@@ -27,7 +27,7 @@ export const Research = () => {
       icon: ShieldCheck,
       title: "Explainable & grounded AI",
       description:
-        "Models that justify their outputs with evidence — describing why an event is abnormal, or citing the sources behind an answer.",
+        "Models that justify their outputs with evidence, describing why an event is abnormal, or citing the sources behind an answer.",
       keywords: ["Explainability", "RAG", "Faithfulness"],
     },
   ];
@@ -40,7 +40,7 @@ export const Research = () => {
           <h2 className="section-heading mt-3">Research interests</h2>
           <p className="mt-4 text-muted-foreground">
             I&apos;m currently doing research at the intersection of computer
-            vision and language models — teaching machines not just to spot
+            vision and language models, teaching machines not just to spot
             what&apos;s unusual in a video, but to explain it.
           </p>
         </div>

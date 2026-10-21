@@ -29,7 +29,7 @@ export const About = () => {
             <p>
               I&apos;m a final-year Computer Science and Engineering (CSE) student
               at the University of Dhaka. Most of what I know comes from building
-              projects and reading on my own — I like taking an idea and turning
+              projects and reading on my own. I like taking an idea and turning
               it into something that actually runs.
             </p>
             <p>
@@ -37,6 +37,11 @@ export const About = () => {
               machine learning. Right now I&apos;m interning at FlyRank AI as a
               backend AI engineer, working on retrieval-augmented generation
               pipelines and the APIs around them.
+            </p>
+            <p>
+              I&apos;m also doing research on video understanding, looking at how
+              vision-language models can detect unusual events in video and
+              explain them.
             </p>
 
             <div className="pt-4">
