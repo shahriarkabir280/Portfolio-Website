@@ -101,24 +101,24 @@ export const Contact = () => {
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-foreground">First name</label>
-                <Input name="first_name" placeholder="Jane" required />
+                <Input name="first_name" placeholder="Your first name" required />
               </div>
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-foreground">Last name</label>
-                <Input name="last_name" placeholder="Doe" required />
+                <Input name="last_name" placeholder="Your last name" required />
               </div>
             </div>
 
             <div className="space-y-1.5">
               <label className="text-sm font-medium text-foreground">Email</label>
-              <Input type="email" name="email" placeholder="jane@example.com" required />
+              <Input type="email" name="email" placeholder="Your email address" required />
             </div>
 
             <div className="space-y-1.5">
               <label className="text-sm font-medium text-foreground">Message</label>
               <Textarea
                 name="message"
-                placeholder="A few lines about what you have in mind…"
+                placeholder="Tell me about the role, project or question"
                 rows={5}
                 className="resize-none"
                 required

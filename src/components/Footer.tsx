@@ -16,7 +16,7 @@ export const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Md. Shahriar Kabir. Built with React &amp; Tailwind.
+            © {currentYear} Md. Shahriar Kabir · Dhaka, Bangladesh
           </p>
 
           <div className="flex items-center gap-1">
