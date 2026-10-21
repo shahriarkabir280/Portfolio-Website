@@ -1,6 +1,6 @@
 % ============================================================
 %  Md. Shahriar Kabir - Resume
-%  ATS-friendly, single column, one page.
+%  ATS-friendly, single column.
 %  Compile with: xelatex  (or pdflatex / lualatex - fontawesome5 supports all)
 % ============================================================
 \documentclass[10pt,a4paper]{article}
@@ -12,6 +12,7 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{fontawesome5}
+\usepackage{needspace}
 
 \hypersetup{
   pdftitle={Md. Shahriar Kabir - Resume},
@@ -20,9 +21,14 @@
 
 % ---------- Formatting ----------
 \pagestyle{empty}
+\raggedbottom
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=1000
+\emergencystretch=3em
 \setlength{\parskip}{1pt}
 
-\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{1pt}\hrule\vspace{2pt}]
+\titleformat{\section}{\Needspace{4\baselineskip}\large\bfseries}{}{0pt}{}[\vspace{1pt}\hrule\vspace{2pt}]
 \titlespacing*{\section}{0pt}{4pt}{1pt}
 
 \setlist[itemize]{leftmargin=1.1em,label=\textbullet,topsep=1pt,itemsep=0.5pt,parsep=0pt,after=\vspace{1pt}}
@@ -30,6 +36,9 @@
 \newcommand{\headingrow}[2]{\textbf{#1}\hfill\textbf{#2}\par}
 \newcommand{\subrow}[2]{\textit{#1}\hfill\textit{#2}\par\vspace{1pt}}
 \newcommand{\sep}{\,\textbar\,}
+\newcommand{\psep}{\ \textbar\ }
+\newcommand{\projectrow}[2]{\Needspace{4\baselineskip}\textbf{#1}\hfill #2\par}
+\newcommand{\techrow}[1]{\textit{#1}\par\vspace{1pt}}
 
 % ============================================================
 \begin{document}
@@ -46,14 +55,14 @@ Dhaka, Bangladesh \\
 
 % ===== Summary =====
 \section*{Summary}
-Final-year Computer Science and Engineering student and Backend AI Engineer Intern at FlyRank AI,
-building RAG answer flows, structured-output and tool-calling pipelines, REST APIs, and full-stack apps
-with Python, FastAPI, and Node.js. 400+ competitive-programming problems solved.
+Final-year Computer Science and Engineering student at the University of Dhaka and Backend AI Engineer Intern at FlyRank AI.
+Builds RAG systems, LLM tool-calling pipelines, and REST APIs with Python, FastAPI, and Node.js, with hands-on experience in
+retrieval evaluation, real-time web applications, and deploying machine learning models.
 
 % ===== Experience =====
 \section*{Experience}
-\headingrow{FlyRank AI \textemdash\ Backend AI Engineer Intern}{Jun 2026 \textendash\ Present}
-\subrow{Remote}{}
+\headingrow{Backend AI Engineer Intern}{Jun 2026 \textendash\ Present}
+\subrow{FlyRank AI, Chicago, Illinois, USA}{Remote}
 \begin{itemize}
   \item Design API contracts and retrieval-backed answer flows for AI product features, owning correctness and failure handling.
   \item Build structured-output and tool-calling workflows over LLM APIs, with schema validation and deterministic parsing of model responses.
@@ -64,49 +73,91 @@ with Python, FastAPI, and Node.js. 400+ competitive-programming problems solved.
 % ===== Projects =====
 \section*{Projects}
 
-\headingrow{GrocyGenie \textemdash\ AI grocery-prediction model}{\href{https://huggingface.co/spaces/shahriar031/GrocyGenie}{Demo} \sep \href{https://github.com/shahriarkabir280/GrocyGenieModel}{GitHub}}
-\subrow{Python, TensorFlow, pandas, NumPy, Hugging Face, Google Colab}{}
+\projectrow{Evidrix \psep Evidence-Grounded Question Answering}{\href{https://github.com/shahriarkabir280/evidrix}{GitHub}}
+\techrow{Python, FastAPI, PostgreSQL, pgvector, Redis, Docker}
 \begin{itemize}
-  \item Developed an ML model that predicts grocery-depletion dates from personalized consumption patterns across multiple item categories.
-  \item Trained and evaluated the model in Google Colab and deployed it as a Hugging Face Space with an inference API for the GrocyGenie mobile app.
+  \item Built a RAG system that answers questions over technical documentation and research papers, citing the exact passage and page behind every claim.
+  \item Implemented hybrid retrieval (vector and full-text search) with cross-encoder reranking, improving MRR@5 by 0.193 over vector-only search on a held-out benchmark.
+  \item Reached 86\% answer correctness with fully faithful citations, and declined every question the documents could not answer.
+  \item Hardened the system for production with per-user data isolation, API-key authentication, rate limiting, background ingestion with retries, and 469 automated tests (92\% coverage).
 \end{itemize}
 
-\headingrow{Digital Knowledge Platform \textemdash\ digital library \& knowledge management}{\href{https://csedu-dkp.farefin.com/library}{Live} \sep \href{https://github.com/shahriarkabir280/Digital-Knowledge-Platform}{GitHub}}
-\subrow{Node.js, Python, Supabase (PostgreSQL), REST APIs, Microservices}{}
+\projectrow{MediSync \psep Healthcare Management Platform}{\href{https://github.com/shahriarkabir280/MediSync}{GitHub}}
+\techrow{React, Node.js, Express, PostgreSQL, Supabase, Socket.IO, WebRTC}
 \begin{itemize}
-  \item Built a role-based platform for creating, organizing, and searching academic resources: document repository, circulation/loan system, and student project showcase.
-  \item Designed a Node.js REST API plus a standalone Python microservice for automated metadata extraction from uploaded documents.
-  \item Implemented authentication, authorization, and role-based access control on Supabase/PostgreSQL for multiple user types.
+  \item Built a multi-portal platform for doctors, patients, and diagnostic centers covering appointments, medical records, lab reports, and billing.
+  \item Developed about 200 REST endpoints on a 46-table PostgreSQL schema.
+  \item Implemented real-time chat with Socket.IO and in-browser video calls with WebRTC.
+  \item Added an LLM-powered clinical assistant that summarizes each patient's lab history, JWT role-based access control, and online payments with automatic revenue sharing.
 \end{itemize}
 
-\headingrow{FamNest \textemdash\ family finance \& organizing app}{\href{https://drive.google.com/file/d/1pVehxGPYByR9XKXYuL-etnwCfXqRqdVO/view}{Demo} \sep \href{https://github.com/shahriarkabir280/FamNest}{GitHub}}
-\subrow{Flutter, Dart, FastAPI, MongoDB Atlas, Cloudinary}{}
+\projectrow{GridWise LLM \psep Energy Grid Optimization}{\href{https://github.com/shahriarkabir280/Energy-Grid-Optimization}{GitHub}}
+\techrow{Python, FastAPI, SciPy, Docker}
 \begin{itemize}
-  \item Built an Android app for expense tracking, event management, and document storage across multi-user households.
-  \item Designed FastAPI REST endpoints, optimized MongoDB Atlas queries, and integrated Cloudinary-backed media storage with organized, searchable files.
+  \item Built a FastAPI service that converts operators' plain-language notes into structured scheduling directives using LLMs.
+  \item Optimized 24-hour grid, solar, and battery schedules for minimum cost with SciPy linear programming, guarded by rule-based safety checks.
+  \item Added replay validation of every plan, automatic fallback between LLM providers, automated tests, and Docker packaging.
+\end{itemize}
+
+\projectrow{GrocyGenie \psep Grocery Consumption Prediction}{\href{https://huggingface.co/spaces/shahriar031/GrocyGenie}{Live} \psep \href{https://github.com/shahriarkabir280/GrocyGenieModel}{GitHub}}
+\techrow{Python, scikit-learn, pandas, NumPy, FastAPI}
+\begin{itemize}
+  \item Trained a gradient-boosting model on a 270K-record synthetic dataset to predict daily consumption and run-out dates for 15 grocery products.
+  \item Achieved R\textsuperscript{2} 0.989 and MAE 43.5 g/day on a held-out split of the synthetic dataset, with reproducible training and evaluation scripts.
+  \item Deployed the model as a FastAPI service on Hugging Face Spaces, with a feedback loop that retrains the model from user corrections.
+\end{itemize}
+
+\projectrow{Digital Knowledge Platform \psep Academic Library System}{\href{https://dkp-frontend-ndrl.onrender.com/}{Live} \psep \href{https://github.com/shahriarkabir280/Digital-Knowledge-Platform}{GitHub}}
+\techrow{React, Node.js, Express, PostgreSQL, Supabase, Python, Docker}
+\begin{itemize}
+  \item Developed a digital library for the CSEDU department with document search, book circulation with automated fines, and a student project showcase.
+  \item Built a Node.js REST API with JWT authentication and role-based access for admins, staff, and members.
+  \item Created a Python microservice that classifies uploaded documents and extracts keywords and metadata; containerized the stack with Docker Compose.
+\end{itemize}
+
+\projectrow{FamNest \psep Family Finance and Organizer App}{\href{https://github.com/shahriarkabir280/FamNest}{GitHub}}
+\techrow{Flutter, Dart, FastAPI, MongoDB Atlas, Cloudinary}
+\begin{itemize}
+  \item Built an Android app for families to track shared expenses and budgets, plan events, and store important documents.
+  \item Designed FastAPI REST endpoints over MongoDB Atlas and integrated Cloudinary for media storage.
+\end{itemize}
+
+\projectrow{Collaborative Text Editor \psep Real-Time Editing over LAN}{\href{https://github.com/shahriarkabir280/Collaborative-Text-Editor}{GitHub}}
+\techrow{Java, JavaFX, TCP sockets, multithreading}
+\begin{itemize}
+  \item Built a desktop editor where multiple users edit the same document in real time over a local network, with chat in every session.
+  \item Designed a multithreaded TCP server with a thread pool configured for up to 100 clients and automatic cleanup of inactive sessions.
+\end{itemize}
+
+\projectrow{Disaster Management System \psep Disaster Response Coordination}{\href{https://github.com/shahriarkabir280/DisasterManagement}{GitHub}}
+\techrow{Node.js, Express, MySQL, HTML, CSS}
+\begin{itemize}
+  \item Built a web app to coordinate disaster response across victims, volunteers, rescue operations, and donations.
+  \item Designed the relational MySQL schema and REST CRUD APIs, secured with Helmet and rate limiting.
 \end{itemize}
 
 % ===== Education =====
 \section*{Education}
-\headingrow{University of Dhaka \textemdash\ B.Sc. in Computer Science and Engineering}{Expected Dec 2026}
+\headingrow{University of Dhaka \psep B.Sc. in Computer Science and Engineering}{Expected Dec 2026}
 \subrow{Dhaka, Bangladesh}{CGPA: 3.60 / 4.00 (through 7th semester)}
-\textbf{Relevant coursework:} Data Structures, Algorithm Analysis, Object-Oriented Programming,
-Database Management, Operating Systems, Computer Networks, Software Engineering, Machine Learning,
-Artificial Intelligence.
+\textbf{Relevant coursework:} Data Structures, Algorithm Analysis, Object-Oriented Programming, Database Management,
+Operating Systems, Computer Networks, Software Engineering, Machine Learning, Artificial Intelligence.\\
+\textbf{Research interests:} Video anomaly detection, vision-language models, weakly supervised learning.
 
 % ===== Skills =====
 \section*{Skills}
-\textbf{Languages:} Python, JavaScript, TypeScript, Java, C, C++, Dart, SQL\\
-\textbf{Backend \& AI:} FastAPI, Node.js, Express, REST APIs, RAG, LLM APIs, tool calling, TensorFlow, Hugging Face\\
-\textbf{Frontend \& Mobile:} React, Flutter, JavaFX, HTML, CSS, Tailwind CSS\\
-\textbf{Data \& Infrastructure:} PostgreSQL, Supabase, MongoDB, MySQL, Docker, Git, GitHub Actions, Linux\\
-\textbf{Practices:} API design, evaluation harnesses, code review, unit testing, CI/CD
+\textbf{Programming Languages:} Python, JavaScript, TypeScript, Java, C++, C, SQL, Dart\\
+\textbf{AI \& Machine Learning:} RAG, LLM APIs, tool calling, structured outputs, embeddings, hybrid search, reranking, LLM evaluation, scikit-learn, TensorFlow, pandas, NumPy, Hugging Face\\
+\textbf{Backend:} FastAPI, Node.js, Express, REST APIs, Socket.IO, WebRTC, JWT authentication\\
+\textbf{Databases:} PostgreSQL, pgvector, Supabase, Redis, MongoDB, MySQL, SQLite\\
+\textbf{Frontend \& Mobile:} React, Tailwind CSS, HTML, CSS, Flutter, JavaFX\\
+\textbf{DevOps \& Tools:} Docker, Docker Compose, Git, GitHub Actions, CI/CD, Linux
 
 % ===== Achievements & Certifications =====
 \section*{Achievements \& Certifications}
 \begin{itemize}
-  \item \textbf{Competitive programming:} 400+ problems solved on \href{https://www.codechef.com/users/shahriar42}{CodeChef} (rating 1426, 2-star); Silver badges in Problem Solving and DSA on \href{https://www.hackerrank.com/profile/shahriarkabir_20}{HackerRank}.
-  \item \textbf{Certifications:} \href{https://www.codechef.com/certificates/public/a367201}{Learn Python Pro}, CodeChef (2023) \sep \href{https://www.hackerrank.com/certificates/6d1cdc7ba513}{SQL (Basic)}, HackerRank (2025).
+  \item \textbf{Competitive programming:} 400+ problems solved on \href{https://www.codechef.com/users/shahriar42}{CodeChef}; Silver badges in Problem Solving and DSA on \href{https://www.hackerrank.com/profile/shahriarkabir_20}{HackerRank}.
+  \item \textbf{Certifications:} \href{https://www.codechef.com/certificates/public/a367201}{Learn Python Pro}, CodeChef (2023) \psep \href{https://www.hackerrank.com/certificates/6d1cdc7ba513}{SQL (Basic)}, HackerRank (2025).
   \item \textbf{Languages:} Bangla (native), English (professional working proficiency).
 \end{itemize}
 
