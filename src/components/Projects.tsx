@@ -19,7 +19,7 @@ export const Projects = () => {
       description:
         "Built for the BUP CSE Hackathon 2026 preliminary round — a FastAPI service that interprets operator notes with LLMs, applies deterministic safety guardrails, and generates optimized energy schedules with linear programming.",
       image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&auto=format&fit=crop&q=60",
+        "/projects/gridwise.webp",
       tech: ["Python", "FastAPI", "SciPy", "LLMs", "Groq", "Gemini", "Docker"],
       github: "https://github.com/shahriarkabir280/Energy-Grid-Optimization",
       live: "",
@@ -30,7 +30,7 @@ export const Projects = () => {
       description:
         "An AI model that predicts when your grocery items will run out, so you can restock before running short. Built as the model layer for the GrocyGenie mobile app.",
       image:
-        "https://plus.unsplash.com/premium_photo-1742244062708-2f718a1f4ddb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY1fHxncm9jZXJ5fGVufDB8fDB8fHww",
+        "/projects/grocygenie.webp",
       tech: ["Python", "TensorFlow", "pandas", "NumPy", "Hugging Face", "Google Colab"],
       github: "https://github.com/shahriarkabir280/GrocyGenieModel",
       live: "https://huggingface.co/spaces/shahriar031/GrocyGenie",
@@ -52,7 +52,7 @@ export const Projects = () => {
       description:
         "A digital library and knowledge-management platform for academic resources, combining a document repository, circulation system, project showcase, and role-based collaboration.",
       image:
-        "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&auto=format&fit=crop&q=60",
+        "/projects/dkp.webp",
       tech: ["Node.js", "Python", "Supabase", "PostgreSQL", "REST APIs"],
       github: "https://github.com/shahriarkabir280/Digital-Knowledge-Platform",
       live: "https://dkp-frontend-ndrl.onrender.com/",
@@ -63,7 +63,7 @@ export const Projects = () => {
       description:
         "An Android app that helps families track expenses, manage events, store documents, and keep memories in a secure digital time capsule.",
       image:
-        "https://media.istockphoto.com/id/1294509749/photo/online-banking-for-family-budget-couple-in-the-kitchen-with-bills.jpg?s=612x612&w=0&k=20&c=4MYekpXzG9YoMnmFa1cDMPEZ0IsugjUdsZRHPz10_OY=",
+        "/projects/famnest.webp",
       tech: ["Flutter", "Dart", "FastAPI", "MongoDB Atlas", "Cloudinary"],
       github: "https://github.com/shahriarkabir280/FamNest",
       live: "",
@@ -74,7 +74,7 @@ export const Projects = () => {
       description:
         "A web app for coordinating disaster response — victim management and resource allocation, built around clean database design and CRUD workflows.",
       image:
-        "https://images.unsplash.com/photo-1547683905-f686c993aae5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJhbCUyMGRpc2FzdGVyfGVufDB8fDB8fHww",
+        "/projects/disaster.webp",
       tech: ["Node.js", "Express", "MySQL", "HTML", "CSS"],
       github: "https://github.com/shahriarkabir280/DisasterManagement",
       live: "",
@@ -85,7 +85,7 @@ export const Projects = () => {
       description:
         "A real-time collaborative editor in Java with JavaFX and TCP sockets — multiple users edit one document over LAN, with chat and session management.",
       image:
-        "https://images.unsplash.com/photo-1485988412941-77a35537dae4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGRvY3VtZW50JTIwZWRpdG9yJTIwdG9vbHN8ZW58MHx8MHx8fDA%3D",
+        "/projects/collab.webp",
       tech: ["Java", "JavaFX", "TCP Sockets", "Concurrency"],
       github: "https://github.com/shahriarkabir280/Collaborative-Text-Editor",
       live: "",
@@ -111,7 +111,7 @@ export const Projects = () => {
               key={project.title}
               className="surface-hover group flex flex-col overflow-hidden"
             >
-              <div className="relative aspect-[16/9] overflow-hidden border-b border-border bg-muted">
+              <div className="relative aspect-[2/1] overflow-hidden border-b border-border bg-muted">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -119,7 +119,7 @@ export const Projects = () => {
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {project.featured && (
-                  <span className="absolute left-3 top-3 rounded-md bg-background/90 px-2 py-0.5 text-xs font-medium text-foreground backdrop-blur-sm">
+                  <span className="absolute right-3 top-3 rounded-md bg-background/90 px-2 py-0.5 text-xs font-medium text-foreground backdrop-blur-sm">
                     Featured
                   </span>
                 )}
