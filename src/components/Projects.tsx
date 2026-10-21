@@ -8,7 +8,7 @@ export const Projects = () => {
       description:
         "A RAG system that answers from your own technical docs and research papers, citing the exact passage, page and section behind every claim — and declining when the answer isn't there. Hybrid retrieval with cross-encoder reranking, benchmarked on a held-out split.",
       image:
-        "https://raw.githubusercontent.com/shahriarkabir280/evidrix/main/docs/images/ui-conversation.png",
+        "/projects/evidrix.webp",
       tech: ["Python", "FastAPI", "PostgreSQL", "pgvector", "Redis", "Ollama", "Docker"],
       github: "https://github.com/shahriarkabir280/evidrix",
       live: "",
@@ -41,7 +41,7 @@ export const Projects = () => {
       description:
         "A full-stack clinic platform connecting doctors, patients, and diagnostic centers — appointments, medical records, lab reports, real-time chat and video calls, a Gemini clinical assistant, and SSLCommerz payments.",
       image:
-        "https://raw.githubusercontent.com/shahriarkabir280/MediSync/main/docs/media/banner.webp",
+        "/projects/medisync.webp",
       tech: ["React", "Node.js", "Express", "PostgreSQL", "Supabase", "Socket.IO", "WebRTC", "Gemini"],
       github: "https://github.com/shahriarkabir280/MediSync",
       live: "",
@@ -55,7 +55,7 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&auto=format&fit=crop&q=60",
       tech: ["Node.js", "Python", "Supabase", "PostgreSQL", "REST APIs"],
       github: "https://github.com/shahriarkabir280/Digital-Knowledge-Platform",
-      live: "https://csedu-dkp.farefin.com/library",
+      live: "https://dkp-frontend-ndrl.onrender.com/",
       featured: true,
     },
     {
@@ -66,7 +66,7 @@ export const Projects = () => {
         "https://media.istockphoto.com/id/1294509749/photo/online-banking-for-family-budget-couple-in-the-kitchen-with-bills.jpg?s=612x612&w=0&k=20&c=4MYekpXzG9YoMnmFa1cDMPEZ0IsugjUdsZRHPz10_OY=",
       tech: ["Flutter", "Dart", "FastAPI", "MongoDB Atlas", "Cloudinary"],
       github: "https://github.com/shahriarkabir280/FamNest",
-      live: "https://drive.google.com/file/d/1pVehxGPYByR9XKXYuL-etnwCfXqRqdVO/view?usp=sharing",
+      live: "",
       featured: true,
     },
     {

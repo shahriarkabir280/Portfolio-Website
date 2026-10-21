@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
-import profileImage from "@/assets/prof.png";
+import profileImage from "@/assets/prof.webp";
 
 export const Hero = () => {
   const socials = [

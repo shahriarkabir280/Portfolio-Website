@@ -5,7 +5,7 @@ export const About = () => {
     { label: "GitHub projects", value: "9+" },
     { label: "Technologies used", value: "15+" },
     { label: "Commits", value: "400+" },
-    { label: "Problems solved", value: "450+" },
+    { label: "Problems solved", value: "400+" },
   ];
 
   const interests = [
