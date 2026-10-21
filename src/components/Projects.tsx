@@ -4,6 +4,28 @@ import { ArrowUpRight, Github } from "lucide-react";
 export const Projects = () => {
   const projects = [
     {
+      title: "Evidrix — evidence-grounded question answering",
+      description:
+        "A RAG system that answers from your own technical docs and research papers, citing the exact passage, page and section behind every claim — and declining when the answer isn't there. Hybrid retrieval with cross-encoder reranking, benchmarked on a held-out split.",
+      image:
+        "https://raw.githubusercontent.com/shahriarkabir280/evidrix/main/docs/images/ui-conversation.png",
+      tech: ["Python", "FastAPI", "PostgreSQL", "pgvector", "Redis", "Ollama", "Docker"],
+      github: "https://github.com/shahriarkabir280/evidrix",
+      live: "",
+      featured: true,
+    },
+    {
+      title: "GridWise LLM — energy grid optimization",
+      description:
+        "Built for the BUP CSE Hackathon 2026 preliminary round — a FastAPI service that interprets operator notes with LLMs, applies deterministic safety guardrails, and generates optimized energy schedules with linear programming.",
+      image:
+        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&auto=format&fit=crop&q=60",
+      tech: ["Python", "FastAPI", "SciPy", "LLMs", "Groq", "Gemini", "Docker"],
+      github: "https://github.com/shahriarkabir280/Energy-Grid-Optimization",
+      live: "",
+      featured: false,
+    },
+    {
       title: "GrocyGenie — grocery prediction model",
       description:
         "An AI model that predicts when your grocery items will run out, so you can restock before running short. Built as the model layer for the GrocyGenie mobile app.",
@@ -12,6 +34,17 @@ export const Projects = () => {
       tech: ["Python", "TensorFlow", "pandas", "NumPy", "Hugging Face", "Google Colab"],
       github: "https://github.com/shahriarkabir280/GrocyGenieModel",
       live: "https://huggingface.co/spaces/shahriar031/GrocyGenie",
+      featured: true,
+    },
+    {
+      title: "MediSync — healthcare management platform",
+      description:
+        "A full-stack clinic platform connecting doctors, patients, and diagnostic centers — appointments, medical records, lab reports, real-time chat and video calls, a Gemini clinical assistant, and SSLCommerz payments.",
+      image:
+        "https://raw.githubusercontent.com/shahriarkabir280/MediSync/main/docs/media/banner.webp",
+      tech: ["React", "Node.js", "Express", "PostgreSQL", "Supabase", "Socket.IO", "WebRTC", "Gemini"],
+      github: "https://github.com/shahriarkabir280/MediSync",
+      live: "",
       featured: true,
     },
     {
@@ -37,17 +70,6 @@ export const Projects = () => {
       featured: true,
     },
     {
-      title: "Collaborative text editor",
-      description:
-        "A real-time collaborative editor in Java with JavaFX and TCP sockets — multiple users edit one document over LAN, with chat and session management.",
-      image:
-        "https://images.unsplash.com/photo-1485988412941-77a35537dae4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGRvY3VtZW50JTIwZWRpdG9yJTIwdG9vbHN8ZW58MHx8MHx8fDA%3D",
-      tech: ["Java", "JavaFX", "TCP Sockets", "Concurrency"],
-      github: "https://github.com/shahriarkabir280/Collaborative-Text-Editor",
-      live: "",
-      featured: false,
-    },
-    {
       title: "Disaster management system",
       description:
         "A web app for coordinating disaster response — victim management and resource allocation, built around clean database design and CRUD workflows.",
@@ -59,14 +81,14 @@ export const Projects = () => {
       featured: false,
     },
     {
-      title: "Portfolio website v1",
+      title: "Collaborative text editor",
       description:
-        "My first portfolio — where I practised responsive layouts and animation with modern web tooling.",
+        "A real-time collaborative editor in Java with JavaFX and TCP sockets — multiple users edit one document over LAN, with chat and session management.",
       image:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      tech: ["React", "TypeScript", "Tailwind CSS", "GSAP"],
-      github: "https://github.com/shahriarkabir280/Portfolio-Website",
-      live: "https://shahriarkabir-25.vercel.app/",
+        "https://images.unsplash.com/photo-1485988412941-77a35537dae4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGRvY3VtZW50JTIwZWRpdG9yJTIwdG9vbHN8ZW58MHx8MHx8fDA%3D",
+      tech: ["Java", "JavaFX", "TCP Sockets", "Concurrency"],
+      github: "https://github.com/shahriarkabir280/Collaborative-Text-Editor",
+      live: "",
       featured: false,
     },
   ];
@@ -78,11 +100,12 @@ export const Projects = () => {
           <span className="eyebrow">Projects</span>
           <h2 className="section-heading mt-3">Things I&apos;ve built</h2>
           <p className="mt-4 text-muted-foreground">
-            A mix of coursework and personal projects, roughly newest first.
+            A mix of coursework and personal projects — AI and machine learning
+            first, then full-stack applications.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <article
               key={project.title}
@@ -102,7 +125,7 @@ export const Projects = () => {
                 )}
               </div>
 
-              <div className="flex flex-1 flex-col p-6">
+              <div className="flex flex-1 flex-col p-5">
                 <h3 className="text-base font-semibold text-foreground">
                   {project.title}
                 </h3>
