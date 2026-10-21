@@ -20,6 +20,10 @@
 }
 
 % ---------- Formatting ----------
+% Emit real space characters so ATS text extraction keeps word boundaries
+\XeTeXinterwordspaceshaping=2
+\frenchspacing
+\newcommand{\realspace}{\XeTeXglyph\XeTeXcharglyph"0020\relax}
 \pagestyle{empty}
 \raggedbottom
 \hyphenpenalty=10000
@@ -33,11 +37,11 @@
 
 \setlist[itemize]{leftmargin=1.1em,label=\textbullet,topsep=1pt,itemsep=0.5pt,parsep=0pt,after=\vspace{1pt}}
 
-\newcommand{\headingrow}[2]{\textbf{#1}\hfill\textbf{#2}\par}
-\newcommand{\subrow}[2]{\textit{#1}\hfill\textit{#2}\par\vspace{1pt}}
+\newcommand{\headingrow}[2]{\textbf{#1}\realspace\hfill\textbf{#2}\par}
+\newcommand{\subrow}[2]{\textit{#1}\realspace\hfill\textit{#2}\par\vspace{1pt}}
 \newcommand{\sep}{\,\textbar\,}
-\newcommand{\psep}{\ \textbar\ }
-\newcommand{\projectrow}[2]{\Needspace{4\baselineskip}\textbf{#1}\hfill #2\par}
+\newcommand{\psep}{\realspace\textbar\realspace}
+\newcommand{\projectrow}[2]{\Needspace{4\baselineskip}\textbf{#1}\realspace\hfill #2\par}
 \newcommand{\techrow}[1]{\textit{#1}\par\vspace{1pt}}
 
 % ============================================================
@@ -61,7 +65,7 @@ retrieval evaluation, real-time web applications, and deploying machine learning
 
 % ===== Experience =====
 \section*{Experience}
-\headingrow{Backend AI Engineer Intern}{Jun 2026 \textendash\ Present}
+\headingrow{Backend AI Engineer Intern}{Jun 2026 –\realspace Present}
 \subrow{FlyRank AI, Chicago, Illinois, USA}{Remote}
 \begin{itemize}
   \item Design API contracts and retrieval-backed answer flows for AI product features, owning correctness and failure handling.
