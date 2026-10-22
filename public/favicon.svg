@@ -1,7 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="116" fill="#4f46e5"/>
-  <text x="50%" y="52%" dy=".02em"
+  <style>
+    .bg { fill: #18181b; }
+    .fg { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #f4f4f5; }
+      .fg { fill: #18181b; }
+    }
+  </style>
+  <circle class="bg" cx="256" cy="256" r="256"/>
+  <text class="fg" x="256" y="256" dy=".02em"
         text-anchor="middle" dominant-baseline="central"
-        font-family="'Inter','Helvetica Neue',Arial,sans-serif"
-        font-size="248" font-weight="700" letter-spacing="-6" fill="#ffffff">SK</text>
+        font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif"
+        font-size="210" font-weight="600" letter-spacing="-4">SK</text>
 </svg>
